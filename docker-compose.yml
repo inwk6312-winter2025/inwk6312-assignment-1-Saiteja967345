@@ -1,0 +1,17 @@
+version: "3"
+services:
+  service1:
+    build: .
+    container_name: service1
+    networks:
+      - mynetwork
+
+  service2:
+    build: .
+    container_name: service2
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
